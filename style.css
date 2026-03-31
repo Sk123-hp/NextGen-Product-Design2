@@ -1,0 +1,435 @@
+*{
+    font-family: "General Sans";
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+#minicircle{
+    width: 10px;
+    height: 10px;
+    z-index: 99999;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff;
+}
+#main {
+    opacity: 1;
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+
+#nav {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav a{
+  color: white;
+  text-decoration: none;
+}
+#heading {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw; /* Adds consistent side spacing */
+    margin-top: 10vh;
+}
+
+#heading h1 {
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.8; /* Brings the words closer together vertically */
+    opacity: 0.6;
+    margin: 0;
+}
+
+/* "PRODUCT" - stays on the left */
+#heading h1:first-child {
+    align-self: flex-start;
+}
+
+/* "DESIGNER" - pushes to the right */
+#DH1 {
+    align-self: flex-end;
+    margin-right: 15vw; /* Adjust this to match the staggered look */
+    opacity: 1; /* Note: Set to 0 if you are using GSAP to fade it in */
+    color: #fff;
+}
+
+.blocktext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Keeps H5 aligned to its own right */
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.blocktext h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.7;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #heading h1 {
+        font-size: 15vw;
+    }
+    #DH1 {
+        margin-right: 0; /* Stack more vertically on mobile */
+    }
+}
+#sheadings{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+#sheadings h5{
+    text-transform: uppercase;
+    margin-top: .5vw;
+    font-size: 1vw;
+    text-align: right;
+}
+
+#herofooter{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    padding: 0 2vw;
+}
+
+#herofooter a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#herofooter #iconset{
+    display: flex;
+    gap: 5px;
+}
+
+#herofooter .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #888;
+}
+
+/* SECOND PAGE */
+#secondpage{
+    padding-right: 10vw;
+    padding-top: 200px;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+}
+
+.elem{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4vw 3vw;
+    border-top: 1px solid #888;
+}
+
+.elem h1{
+    text-transform: uppercase;
+    font-size: 7.6vw;
+    opacity: .7;
+}
+
+.elemlast{
+    border-bottom: 1px solid #888;
+}
+
+.elem img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 20%;
+    transform: scale(0.8);
+    display: none;
+    z-index: 999;
+}
+
+/* ABOUT */
+#about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #fff;
+    padding: 10vw 5vw;
+    padding-left: 30vw;
+}
+
+#textabout{
+    width: 20rem;
+}
+
+#textabout h5{
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 10px;
+}
+
+#textabout p{
+    line-height: 1.10;
+    margin-bottom: 40px;
+}
+
+#textabout #t{
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 100px;
+    font-size: 12px;
+    border: 1px solid #fff;
+    text-decoration: none;
+}
+
+#about img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+#about img {
+    filter: grayscale(100%);
+    transition: all 0.1s ease;
+}
+
+#about:hover img {
+    filter: grayscale(0%);
+}
+
+#subscribe{
+    color: #fff;
+    padding: 20px 30px;
+    background-color: black;
+    padding-bottom:7vw ;
+}
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+}
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#footer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+#footerleft{
+ display: flex;
+ gap: 20px;
+}
+#footer a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+   }
+
+   #footerright{
+    display: flex;
+    gap: 30px;
+   }
+
+
+/* Cursor dot */
+/* Basic small cursor */
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s, height 0.3s, border 0.3s;
+}
+
+#cursor .cursor-text {
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Blur trailing cursor */
+#cursor-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+}
+/* LOADER */
+
+
+/* Hide main initially */
+/* LOADER */
+/* Loader full screen */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000; /* or any background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Load text */
+.load-text {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 300px;
+    height: 5px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+/* Progress bar itself */
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+/* If you want hero text starting above */
+.animate-from-top {
+    transform: translateY(-60px);
+    opacity: 0;
+}
+#cursor {
+    mix-blend-mode: difference;
+}
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+/* LOGO SECTION STYLES */
+#logos {
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+    background-color: #080808;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  
+  .section-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Marquee Container */
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Marquee Track: linear scroll */
+  .marquee-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+  
+  /* Infinite scroll animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Logo style + hover effect */
+  .logo {
+    width: 120px;
+    height: 60px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logo {
+      width: 90px;
+      height: 45px;
+    }
+    .section-title {
+      font-size: 24px;
+    }
+    .marquee-track {
+      gap: 20px;
+    }
+  }

@@ -1,0 +1,37 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* IMPORTANT FOR LOCOMOTIVE */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* MAIN CONTAINER */
+#main {
+    min-height: 100vh;
+}
+
+/* Smooth rendering */
+.has-scroll-smooth [data-scroll-container] {
+    will-change: transform;
+}
+
+/* Sections */
+[data-scroll-section] {
+    position: relative;
+}
+
+/* Optional for better visuals */
+img {
+    width: 100%;
+    display: block;
+}
+
