@@ -2,7 +2,7 @@
     font-family: "General Sans";
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background-color:#0a192f;
     box-sizing: border-box;
 }
 
@@ -19,6 +19,7 @@ body, html{
     background: #fff;
 }
 #main {
+    background-color:#0a192f;
     opacity: 1;
 }
 #hero{
